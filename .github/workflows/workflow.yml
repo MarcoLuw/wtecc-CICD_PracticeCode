@@ -1,0 +1,17 @@
+# Step 1: add name
+name: CI workflow
+
+# Step 2: add event triggers
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+
+# Step 3: add a Job
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    # Step 4: target Python 3.9
+    container: python:3.9-slim
